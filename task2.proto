@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package task2;
+
+message FullName {
+	string name = 1;
+	string fam = 2;
+	optional string otch = 3;
+}
+
+message Student {
+	FullName name = 1;
+	repeated uint32 grades = 2;
+	uint32 avg_score = 3;
+}
+
+message StudentsGroup {
+	repeated Student students = 1;
+}
